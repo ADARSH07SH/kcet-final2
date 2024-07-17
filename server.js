@@ -1,8 +1,13 @@
-const express = require("express");
-const path = require("path");
-const mysql = require("mysql2");
-const PDFDocument = require("pdfkit");
-require("dotenv").config();
+import express from "express";
+import path from "path";
+import mysql from "mysql2";
+import PDFDocument from "pdfkit";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+dotenv.config();
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -40,8 +45,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("rank.ejs");
 });
-
-
 
 app.get("/list", (req, res) => {
   const { rank, category, preferredCourse, page = 1 } = req.query;
