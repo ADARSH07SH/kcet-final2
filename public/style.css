@@ -1,0 +1,137 @@
+/* General Body Styling */
+body {
+    background-color: #20262C;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Article Container Styling */
+article {
+    width: 90%;
+    max-width: 600px;
+    background-color: #2f3740;
+    padding: 7%;
+    border-radius: 1em;
+    box-shadow: 1px 2px 8px rgb(29, 28, 4);
+    transition: box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article:hover {
+    box-shadow: 1px 2px 4px rgb(29, 28, 4); /* Less prominent shadow on hover */
+}
+
+/* Title Tag Styling */
+#tag {
+    background-color: #455260;
+    color: #beff00;
+    font-weight: bold;
+    padding: .2em 1em;
+    border-radius: 0.4em;
+    margin-bottom: 1em;
+}
+
+/* Responsive Media Query for Article Container */
+@media (max-width: 768px) {
+    article {
+        width: 90%;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+}
+
+/* Labels Styling */
+label {
+    color: #beff00;
+    display: block;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+/* Input and Select Styling */
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 0.4em;
+    border: none;
+    background-color: #455260;
+    color: white;
+    font-size: 1em;
+}
+
+/* Ensure input retains background color on focus, active, and valid states */
+input:focus, input:active, input:valid {
+    background-color: #455260;
+    color: white; /* Ensure text remains visible */
+}
+
+/* Select Styling */
+select {
+    max-height: 8em; /* Adjust height as needed */
+    overflow: auto;
+}
+
+/* Custom scrollbar styling for Select */
+select::-webkit-scrollbar {
+    width: 12px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #2f3740;
+    border-radius: 0.4em;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: #beff00;
+    border-radius: 0.4em;
+    border: 3px solid #2f3740;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+    background-color: #ffd700;
+}
+
+/* Submit Button Styling */
+#submitButton {
+    background-color: #20262C;
+    color: #beff00;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+#submitButton:hover {
+    background-color: #beff00;
+    color: #20262C;
+}
+
+/* Tag1 Styling (Use Desktop Site) */
+#tag1 {
+    
+    color: #beff00;
+    font-size: 0.8em;
+    margin-top: 5%; /* Adjust spacing */
+}
+

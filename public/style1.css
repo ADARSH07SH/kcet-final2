@@ -1,0 +1,201 @@
+/* General Body Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #20262C;
+    color: #beff00;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+    width: 95%; /* Adjusted to 95% for better responsiveness */
+    max-width: 1200px; /* Maintain maximum width for larger screens */
+    background-color: white;
+    color: black;
+    margin: 20px auto; /* Center container and provide margin */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling for tables on smaller screens */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px; /* Increased padding for better touch interaction */
+    text-align: center; /* Center align all table cells */
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky; /* Keep the headers sticky */
+    top: 0;
+}
+
+th.small, td.small {
+    width: 80px; /* Adjust width for smaller screens */
+    max-width: 80px;
+}
+
+th.medium, td.medium {
+    width: 150px; /* Adjust width for smaller screens */
+    max-width: 150px;
+}
+
+th.college-name, td.college-name {
+    text-align: left; /* Left-align college name */
+    max-width: 300px; /* Adjust max-width for college name */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0 5px; /* Adjust spacing between pagination links */
+}
+
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination .disabled {
+    pointer-events: none;
+    color: #ccc;
+}
+
+/* Make Responsive for Mobile and Small Screens */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%; /* Adjusted to 90% for tablets and smaller laptops */
+        padding: 15px; /* Increased padding for better spacing */
+    }
+
+    th, td {
+        padding: 8px; /* Decreased padding for better fit on smaller screens */
+    }
+
+    th.small, td.small {
+        width: 70px; /* Adjusted width for smaller screens */
+        max-width: 70px;
+    }
+
+    th.medium, td.medium {
+        width: 120px; /* Adjusted width for smaller screens */
+        max-width: 120px;
+    }
+
+    .pagination {
+        margin-top: 15px; /* Adjusted margin for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjusted to 95% for better fit on smaller screens */
+    }
+
+    th, td {
+        font-size: 14px; /* Decreased font size for smaller screens */
+        padding: 6px; /* Decreased padding for better fit on smaller screens */
+    }
+
+    th.small, td.small {
+        width: 60px; /* Adjusted width for smaller screens */
+        max-width: 60px;
+    }
+
+    th.medium, td.medium {
+        width: 100px; /* Adjusted width for smaller screens */
+        max-width: 100px;
+    }
+
+    .pagination {
+        margin-top: 10px; /* Adjusted margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Adjusted to 100% for very small screens */
+        padding: 10px; /* Increased padding for better fit on smaller screens */
+    }
+
+    th, td {
+        font-size: 12px; /* Further decreased font size for very small screens */
+        padding: 5px; /* Further decreased padding for better fit on very small screens */
+    }
+
+    th.small, td.small {
+        width: 50px; /* Adjusted width for very small screens */
+        max-width: 50px;
+    }
+
+    th.medium, td.medium {
+        width: 80px; /* Adjusted width for very small screens */
+        max-width: 80px;
+    }
+
+    .pagination {
+        margin-top: 5px; /* Adjusted margin for very small screens */
+    }
+}
+
+.download-button {
+        text-align: center;
+margin-top: 25px; 
+}
+     
+.download-button a {
+    background-color: dodgerblue;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0 5px;
+    border-radius: 5px; /* Adjust spacing between pagination links */
+}
+
+.download-button a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.download-button a:hover:not(.active) {
+    color: black;}
+
+.download-button .disabled {
+    pointer-events: none;
+    color: #ccc;
+}
